@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <title>Clima</title>
+    <!-- Path to Framework7 Library CSS -->
+    <link rel="stylesheet" href="lib/framework7/css/framework7.min.css">
+    <!-- Path to your custom app styles-->
+    <link href="css/style.css">
+
+</head>
+<style>
+    div[class*="col"] {
+        background: #fff;
+        text-align: center;
+        color: #000;
+        border: 1px solid #ddd;
+        padding: 5px;
+        font-size: 12px;
+    }
+    
+    img,
+    #cen {
+        width: 100%;
+    }
+    
+    #temp,
+    #rad,
+    #hum {
+        background-color: yellow;
+        height: 100%;
+    }
+</style>
+
+<body>
+    <div id="app">
+        <div class="view view-main" style="background-color: rgb(7, 14, 54); height: 100%">
+            <div style="height: 20%">
+                <h1 style="color: white;">
+                    <center>UBIOBIO IOT</center>
+                </h1>
+            </div>
+            <div class="block block-strong text-align-center" style="height: 40%">
+                <!-- we will init this gauge in JavaScript -->
+                <div class="gauge gauge-init"></div>
+            </div>
+            <!-- <div class="block" style="height: 10%">
+                Hola
+            </div> -->
+            <div class="row no-gap" style="height: 30%">
+                <div class="col no-gap" id="temp" style="width: 33%">
+                    <div class="row no-gap" style="height: 70%">
+                        <center><img src="img/temperatura.svg"></center>
+                    </div>
+                    <div class="row no-gap" style="height: 30%">
+                        <strong id="cen"><center>Temperatura</center></strong>
+                    </div>
+                </div>
+                <div class="col no-gap" id="rad" style="width: 34%">
+                    <div class="row no-gap" style="height: 70%">
+                        <center><img src="img/sun.svg"></center>
+                    </div>
+                    <div class="row no-gap" style="height: 30%">
+                        <strong id="cen"><center>Radiación UV</center></strong>
+                    </div>
+                </div>
+                <div class="col no-gap" id="hum" style="width: 33%">
+                    <div class="row no-gap" style="height: 70%">
+                        <center><img src="img/humidity.svg"></center>
+                    </div>
+                    <div class="row no-gap" style="height: 30%">
+                        <strong id="cen"><center>Humedad</center></strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+</html>
