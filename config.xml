@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <icon src="img/ic_launcher-web.png">
-<widget id="cl.ubiobio.clima" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>clima</name>
+<widget id="com.example.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Clima</name>
     <description>
         A basic Framework7 template for PhoneGap.
     </description>
